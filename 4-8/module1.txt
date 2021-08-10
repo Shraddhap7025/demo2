@@ -1,0 +1,29 @@
+// import { a,show } from "./module.js";
+// console.log(a)
+// console.log(show())
+
+// import { a as name,show as display } from "./module.js";
+// console.log(name)
+// console.log(display())
+
+// import  * as mod from "./module.js";
+// console.log(mod.a)
+// console.log(mod.show())
+
+
+// import { a,show,add } from "./module.js";
+// console.log(a)
+// console.log(show())
+// console.log(add(1,2))
+
+// import c from './module.js'
+// console.log(c.getName())
+// c.setName("CDAC")
+// console.log(c.getName())
+
+
+import c,{name} from './module.js'
+console.log(c.getName())
+c.setName("CDAC")
+console.log(c.getName())
+console.log(name)

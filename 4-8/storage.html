@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>HTML Web storage</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <input type="text" id="name">
+    <input type="button" id="btn" value="Set storage">
+    <input type="button" id="btn2" value="Remove Local Storage Info" 
+    onclick="localStorage.removeItem('Username')">
+    <br>
+   <input type="button" id="btn1" value="Get Storage Info">
+    <div id="info"></div>
+
+    <br>
+    <input type="button" id="count" value="Hit Count"><p id="hit"></p>
+   <script>
+        document.getElementById("btn").onclick=function(){
+            var n=document.getElementById("name").value;
+            // localStorage.setItem("Username",n) OR
+            localStorage.Username=n
+            sessionStorage.setItem("email","abc@gmail.com")
+
+        }
+        document.getElementById("btn1").onclick=function(){
+    //    document.getElementById("info").innerHTML=localStorage.getItem("Username") OR
+    document.getElementById("info").innerHTML=localStorage.Username
+        }
+
+
+        document.getElementById("count").onclick=function(){
+            if(sessionStorage.checkcount){
+                sessionStorage.checkcount = parseInt(sessionStorage.checkcount)+1;
+            }
+            else
+                sessionStorage.checkcount=1
+            
+                document.getElementById("hit").innerHTML=sessionStorage.checkcount
+        }
+    </script>
+</body>
+</html>

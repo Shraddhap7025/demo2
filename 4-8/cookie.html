@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cookie Demo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ </head>
+<body>
+    <select id="a" onchange="applycolor()">
+        <option selected disabled value="select">select color</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">Blue</option>
+    </select>
+    <script>
+        function applycolor(){
+            var color=document.getElementById("a").value;
+            if(color!='select')
+                {
+                    document.body.style.background=color
+                    document.cookie="color="+color   //setting cookie
+                }
+        }
+        document.body.onload=function(){
+            if(document.cookie.length!=0){ // "color=red"
+               var v= document.cookie.split("=");
+               document.body.style.background=v[1]
+               document.getElementById("a").value=v[1]
+            }
+        }
+
+        /*  checkbox - id=rem for remember me
+        document.getElementById("rem").onclick=function(){
+            if(this.checked==true)
+                // set cookie -> 
+            else
+        }
+         document.body.onload=function(){
+            if(document.cookie.length!=0){
+                // logic
+            }
+        }
+            */       
+        </script>
+</body>
+</html>

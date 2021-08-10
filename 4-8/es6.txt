@@ -1,0 +1,32 @@
+Destructuring Assignment-
+Array into individual variable
+var list=["a","hello","welcome"]
+var [a,b,c]=list
+d.w(a)
+d.w(b)
+d.w(c)
+
+var obj={name:"ram",age:20}
+d.w(obj.name)
+
+var {name,age}=obj
+d.w(name) //ram
+d.w(age) 20
+
+============================================
+Bootstrap -
+CSS Framework
+
+bootstrap.css - original files (including space and indents ) use when we are developing webpage.
+bootstrap.min.css - minfied version (removes the extra space,lines and indents) -
+production purpose
+bootstrap.css.map - testing purpose
+
+
+
+
+
+
+
+
+

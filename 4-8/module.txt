@@ -1,0 +1,41 @@
+
+// export let a=10;
+// export let show=function(){
+//     return "hello from show function"
+// }
+// let add=function(a,b){
+//     return a+b
+// }
+
+// let a=10;
+// let show=function(){
+//     return "hello from show function"
+// }
+// let add=function(a,b){
+//     return "add="+a+b
+// }
+// export {a,show,add}
+
+
+// let name = 'Infoway'
+// let company = {
+//    getName:function(){
+//       return name
+//    },
+//    setName:function(newName){
+//       name =newName
+//    }
+// }
+// export default company
+
+
+export let name = 'Infoway'
+let company = {
+   getName:function(){
+      return name
+   },
+   setName:function(newName){
+      name =newName
+   }
+}
+export default company
