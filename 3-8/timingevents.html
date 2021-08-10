@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <input type="button" onclick="st=setTimeout(printhello,4000)" value="Print Hello">
+    <input type="button" value="clearTimeout" onclick="clearTimeout(st)"><br><br>
+    <div id="time"></div>
+    <input type="button"  value="Start" id="start">
+    <input type="button"  value="Stop" id="stop">
+    <input type="button"  value="Reset" id="Reset">
+   <script>
+       var si;
+        function printhello(){
+            alert("hello from setTimeout")
+        }
+        // setTimeout(function(){alert("hello")},5000);
+        function Timer(){
+        var dt=new Date()
+        document.getElementById("time").innerHTML=dt.toLocaleTimeString()
+        }
+       Timer();
+
+        document.getElementById("start").onclick=function(){
+            si=setInterval(Timer,1000)
+        }
+        document.getElementById("stop").onclick=function(){
+           clearInterval(si)
+        }
+        document.getElementById("Reset").onclick=function(){
+        document.getElementById("time").innerHTML="00:00:00 AM"
+        }
+
+
+        document.body.onload=function(){
+            setTimeout(function(){
+                document.body.style.background="pink"
+            },5000)
+        }
+    </script>
+</body>
+</html>

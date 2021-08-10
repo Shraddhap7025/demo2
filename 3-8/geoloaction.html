@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Geolocation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div id="loc"></div>
+    <input type="button" id="location" value="Location"><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.425100413961!2d73.81042431489257!3d18.509682387415406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c065a7c56561%3A0xe6e0299d0330dcf9!2sInfoway%20Technologies%20Private%20Limited!5e0!3m2!1sen!2sin!4v1627962261672!5m2!1sen!2sin" width="200" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <Script>
+        document.getElementById("location").onclick=function(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(function(position){
+                    document.getElementById("loc").innerHTML="Latitude= "+position.coords.latitude+
+                    "  longitude= "+position.coords.longitude
+                })
+            }
+            else{
+                document.getElementById("loc").innerHTML="Goloaction is not supported by your browser"
+            }
+        }
+    </Script>
+</body>
+</html>

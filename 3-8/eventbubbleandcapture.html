@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    <div style="background-color: orchid; width: 300px;height: 200px;" id="div1">
+        <p style="background-color:peachpuff;width: 100px;height: 100px;" id="para1">Para1</p>
+    </div>
+    <script>
+        document.getElementById('div1').addEventListener("click",function(){
+            alert("parent called")
+        })
+        document.getElementById('para1').addEventListener("click",function(){
+            alert("child called")
+        })
+    </script>
+</body>
+</html>
+
+<!--  false - means event bubbling means if we are calling child event then child will get called and then automatically parent event.-->
+<!-- true - (eventCaputre)means if we are calling child event then first parent will get called then automatically child event -->
+<!-- addEventListener(event,function,capture) 
+   addEventListener("click","hello") ==>bubbling  
+addEventListener("click","hello",false) ==>bubbling
+addEventListener("click","hello",true) ==>capture
+-->

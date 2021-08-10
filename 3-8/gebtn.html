@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <input type="button" onclick="window.history.back()" value="back">
+    <a href="form1.html">Open Form</a>
+    <h1>hgg</h1>
+    <h2 class="abc">fdhgfhg</h2>
+    <p class="abc">hmfhgj</p>
+    <h1>fdghfjg</h1>
+    <h1>ghjdgh</h1>
+    <h3 class="abc">fghfghk</h3>
+    <p class="abc">fghfkdhgjfhdgj</p>
+
+    <input type="button" value="apply CSS on h1" id="btn">
+
+    <script>
+        document.getElementById("btn").onclick=function(){
+           var h1array= document.getElementsByTagName('h1'); //array of h1 tags
+           for(var i=0;i<h1array.length;i++)
+            h1array[i].style.backgroundColor="red"
+        }
+    </script>
+</body>
+</html>

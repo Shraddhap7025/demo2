@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <!-- <input type="button" id="counter" value="counter" 
+    onclick="document.getElementById('count').innerHTML=checkcount()"><br> -->
+
+    <input type="button" id="counter" value="counter" 
+    onclick="document.getElementById('count').innerHTML=c()" ><br>
+    <p id="count"></p>
+    <script>
+        // f()
+            // var f=function(){
+          //         document.write("hello")
+            // }
+            // f()
+        // (function(){document.write("hello")})();
+        // (function(a,b){document.write(a+b)})(2,3);
+
+
+        // var count=0; //global (we can access this anywhere thorughout the program)
+        // function checkcount(){
+        //     // var count=0; //local variable
+        //     count+=1;
+        //     document.getElementById("count").innerHTML=count;
+        // }
+      
+
+      var c =  (function checkcount(){
+            var count1=0;
+        //     function increasecount(){
+        //         return ++count1
+        //     }
+        // return increasecount;
+
+        return function increasecount(){
+                return ++count1
+            }
+        })();
+        //  var c=checkcount();
+        //  document.write (c()+"<BR>")
+        //  document.write (c()+"<BR>")
+        //  document.write (c()+"<BR>")
+     
+
+    </script>
+   
+</body>
+</html>

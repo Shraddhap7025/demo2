@@ -1,0 +1,11 @@
+1. Randomly change the background color of webpage after each 4 sec interval.
+Hint - stInterval() , random() or Array of colors
+
+Data Interchange Format - XML (uses user defined tags and JSON - javascript object notations)
+To trasmit and store the data.
+So that 2 app can communicate and transmit data to each other in the proper manner.
+Ex- Indigo Official Website and Goibibo or yatra etc.
+var student={
+        "fname":"Ram",
+        "lname":"Sharma",
+        "age":20}
